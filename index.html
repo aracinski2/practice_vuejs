@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Practice Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>Hello from HTML!</h1>
+    <div id="app">
+      {{ message }}
+      {{ name }}
+      <ol>
+        <li v-for="todo in todos">
+          {{ todo.text }}
+        </li>
+      </ol>
+      <p>{{ message2 }}</p>
+      <button v-on:click="reverseMessage">Reverse Message</button>
+      <p>{{ message3 }}</p>
+      <input v-model="message3">
+      <p><button v-on:click="changeMessage">Don't Click Me</button></p>
+    </div>
+  </body>
+</html>
